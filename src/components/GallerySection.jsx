@@ -4,8 +4,8 @@ import { X } from "lucide-react";
 
 const photos = [
   {
-    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/b2/d7/b0/island-hopping-in-olango.jpg?w=800&h=600&s=1",
-    alt: "Island hopping in Olango",
+    src: "https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/2a3d5b12e_image.png",
+    alt: "Happy guests jumping on the beach",
   },
   {
     src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/38/0f/24/20180302-133645-largejpg.jpg?w=800&h=600&s=1",
