@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ChevronDown, Waves } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const HERO_IMAGE = "https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/52caa3636_generated_079ce2e9.png";
+const HERO_IMAGE = "https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/0bf267555_image.png";
 
 export default function HeroSection() {
   const scrollTo = (href) => {
