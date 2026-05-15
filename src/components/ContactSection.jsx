@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 
 const contactInfo = [
-  { icon: MapPin, label: "Location", value: "Mactan, Cebu, Philippines" },
+  { icon: MapPin, label: "Location", value: "Santa Rosa Port, Olango Island, Lapu-Lapu City, Cebu, Philippines" },
   { icon: Phone, label: "Phone", value: "+63 (0) 917-XXX-XXXX" },
   { icon: Mail, label: "Email", value: "info@ocean-dreamer.com" },
   { icon: MessageCircle, label: "WhatsApp", value: "Available for inquiries" },
