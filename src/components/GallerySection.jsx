@@ -43,6 +43,10 @@ const photos = [
     src: "https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/3ff5abf90_image.png",
     alt: "Beach picnic with happy guests",
   },
+  {
+    src: "https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/cc1e65881_image.png",
+    alt: "Guests and crew on the boat",
+  },
 ];
 
 export default function GallerySection() {
