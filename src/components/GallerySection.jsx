@@ -32,8 +32,8 @@ const photos = [
     alt: "Sunset at the beach",
   },
   {
-    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/df/c2/6f/img-20160905-wa0016-largejpg.jpg?w=800&h=600&s=1",
-    alt: "White sand beach paradise",
+    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/1f/05/ad/img-20200309-wa0000-largejpg.jpg?w=800&h=600&s=1",
+    alt: "Island hopping fun",
   },
   {
     src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/17/8f/14/img-20190818-134245-largejpg.jpg?w=800&h=600&s=1",
