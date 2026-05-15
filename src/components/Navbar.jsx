@@ -34,9 +34,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <button onClick={() => scrollTo("#home")} className="flex items-center group">
           <img
-            src="https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/04a056078_image.png"
+            src="https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/459e2ffef_transparentlogo.png"
             alt="Ocean Dreamer Island Tours"
-            className="h-20 md:h-24 w-auto object-contain group-hover:scale-105 transition-transform"
+            className="h-28 md:h-36 w-auto object-contain group-hover:scale-105 transition-transform"
           />
         </button>
 

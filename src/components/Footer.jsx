@@ -8,9 +8,9 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center">
             <img
-              src="https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/04a056078_image.png"
+              src="https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/459e2ffef_transparentlogo.png"
               alt="Ocean Dreamer Island Tours"
-              className="h-16 w-auto object-contain"
+              className="h-20 w-auto object-contain"
             />
           </div>
 
