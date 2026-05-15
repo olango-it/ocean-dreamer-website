@@ -44,8 +44,8 @@ const photos = [
     alt: "Beach picnic with happy guests",
   },
   {
-    src: "https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/cc1e65881_image.png",
-    alt: "Guests and crew on the boat",
+    src: "https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/3dea061d7_image.png",
+    alt: "Group selfie with guests and crew",
   },
 ];
 
