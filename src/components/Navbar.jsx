@@ -36,7 +36,7 @@ export default function Navbar() {
           <img
             src="https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/d9d3b610a_image.png"
             alt="Ocean Dreamer Island Tours"
-            className="h-20 md:h-24 w-auto object-contain group-hover:scale-105 transition-transform mix-blend-multiply drop-shadow-lg"
+            className="h-20 md:h-28 w-auto object-contain group-hover:scale-105 transition-transform drop-shadow-sm"
           />
         </button>
 
