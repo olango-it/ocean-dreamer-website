@@ -29,11 +29,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-white/90 backdrop-blur-xl shadow-lg shadow-primary/5"
-          : "bg-transparent"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md shadow-primary/5"
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <button onClick={() => scrollTo("#home")} className="flex items-center group">
@@ -50,9 +46,7 @@ export default function Navbar() {
             <button
               key={link.href}
               onClick={() => scrollTo(link.href)}
-              className={`font-body text-sm font-medium tracking-wide transition-colors hover:text-primary ${
-                scrolled ? "text-foreground/70" : "text-white/80 hover:text-white"
-              }`}
+              className="font-body text-sm font-medium tracking-wide transition-colors text-foreground/70 hover:text-primary"
             >
               {link.label}
             </button>
@@ -62,7 +56,7 @@ export default function Navbar() {
         {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className={`md:hidden p-2 rounded-lg transition-colors ${scrolled ? "text-foreground" : "text-white"}`}
+          className="md:hidden p-2 rounded-lg transition-colors text-foreground"
         >
           {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
