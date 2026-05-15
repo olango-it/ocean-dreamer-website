@@ -16,28 +16,28 @@ const photos = [
     alt: "Crystal clear waters",
   },
   {
-    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/df/c2/6f/img-20160905-wa0016-largejpg.jpg?w=800&h=600&s=1",
-    alt: "Beach fun",
-  },
-  {
-    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/17/8f/10/img-20190818-115830-largejpg.jpg?w=900&h=-1&s=1",
-    alt: "Beach relaxation",
-  },
-  {
     src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/1f/05/ab/img-20200309-120304-103.jpg?w=800&h=600&s=1",
     alt: "Snorkeling adventure",
   },
   {
-    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/17/8f/14/img-20190818-134245-largejpg.jpg?w=800&h=600&s=1",
-    alt: "Island scenery",
+    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/17/8f/11/img-20190818-121909-largejpg.jpg?w=800&h=600&s=1",
+    alt: "Tropical paradise waters",
   },
   {
     src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/17/8f/0f/img-20190818-102317-largejpg.jpg?w=700&h=600&s=1",
-    alt: "Morning snorkeling adventure",
+    alt: "Morning island adventure",
   },
   {
-    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/17/8f/11/img-20190818-121909-largejpg.jpg?w=800&h=600&s=1",
-    alt: "Tropical waters",
+    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/17/8f/10/img-20190818-115830-largejpg.jpg?w=900&h=-1&s=1",
+    alt: "Sunset at the beach",
+  },
+  {
+    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/1f/05/ad/img-20200309-wa0000-largejpg.jpg?w=800&h=600&s=1",
+    alt: "Island hopping fun",
+  },
+  {
+    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/17/8f/14/img-20190818-134245-largejpg.jpg?w=800&h=600&s=1",
+    alt: "Tropical island scenery",
   },
 ];
 
