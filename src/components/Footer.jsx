@@ -10,7 +10,7 @@ export default function Footer() {
             <img
               src="https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/4fc5382e2_image.png"
               alt="Ocean Dreamer Island Tours"
-              className="h-12 w-auto object-contain brightness-0 invert opacity-80"
+              className="h-14 w-auto object-contain"
             />
           </div>
 
