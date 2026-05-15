@@ -27,9 +27,9 @@ export default function Footer() {
           {/* Logo & tagline */}
           <div className="flex flex-col items-start gap-4">
             <img
-              src="https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/459e2ffef_transparentlogo.png"
+              src="https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/76b0e6cf7_transparentlogo.png"
               alt="Ocean Dreamer Island Tours"
-              className="h-28 w-auto object-contain brightness-0 invert"
+              className="h-28 w-auto object-contain"
             />
             <p className="font-body text-sm text-white/60 leading-relaxed max-w-xs">
               Experience the magic of Olango Island and its stunning neighboring islets with the most memorable island-hopping tours in the Philippines.
