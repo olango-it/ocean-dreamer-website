@@ -24,8 +24,8 @@ const photos = [
     alt: "Tropical paradise waters",
   },
   {
-    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/17/8f/0f/img-20190818-102317-largejpg.jpg?w=700&h=600&s=1",
-    alt: "Morning island adventure",
+    src: "https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/3dea061d7_image.png",
+    alt: "Group selfie with guests and crew",
   },
   {
     src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/17/8f/10/img-20190818-115830-largejpg.jpg?w=900&h=-1&s=1",
