@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Anchor, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -36,18 +36,12 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <button onClick={() => scrollTo("#home")} className="flex items-center gap-2.5 group">
-          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center group-hover:scale-110 transition-transform">
-            <Anchor className="w-5 h-5 text-primary-foreground" />
-          </div>
-          <div className="flex flex-col">
-            <span className={`font-heading text-lg font-bold leading-tight transition-colors ${scrolled ? "text-foreground" : "text-white"}`}>
-              Ocean Dreamer
-            </span>
-            <span className={`text-[10px] font-body uppercase tracking-[0.2em] transition-colors ${scrolled ? "text-muted-foreground" : "text-white/70"}`}>
-              Island Tours
-            </span>
-          </div>
+        <button onClick={() => scrollTo("#home")} className="flex items-center group">
+          <img
+            src="https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/4fc5382e2_image.png"
+            alt="Ocean Dreamer Island Tours"
+            className="h-12 md:h-14 w-auto object-contain group-hover:scale-105 transition-transform drop-shadow-md"
+          />
         </button>
 
         {/* Desktop */}

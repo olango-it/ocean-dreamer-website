@@ -1,23 +1,17 @@
 import React from "react";
-import { Anchor } from "lucide-react";
+
 
 export default function Footer() {
   return (
     <footer className="bg-foreground text-background py-12 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-full bg-primary flex items-center justify-center">
-              <Anchor className="w-4 h-4 text-primary-foreground" />
-            </div>
-            <div>
-              <span className="font-heading text-base font-bold text-background">
-                Ocean Dreamer
-              </span>
-              <span className="font-body text-[10px] uppercase tracking-[0.2em] text-background/50 block">
-                Island Tours
-              </span>
-            </div>
+          <div className="flex items-center">
+            <img
+              src="https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/4fc5382e2_image.png"
+              alt="Ocean Dreamer Island Tours"
+              className="h-12 w-auto object-contain brightness-0 invert opacity-80"
+            />
           </div>
 
           <div className="flex items-center gap-6">
