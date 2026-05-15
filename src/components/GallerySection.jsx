@@ -36,8 +36,8 @@ const photos = [
     alt: "Island hopping fun",
   },
   {
-    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/df/c2/6f/img-20160905-wa0016-largejpg.jpg?w=800&h=600&s=1",
-    alt: "White sand beach",
+    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/17/8f/14/img-20190818-134245-largejpg.jpg?w=800&h=600&s=1",
+    alt: "Tropical island scenery",
   },
 ];
 
