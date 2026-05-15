@@ -39,6 +39,10 @@ const photos = [
     src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/17/8f/14/img-20190818-134245-largejpg.jpg?w=800&h=600&s=1",
     alt: "Tropical island scenery",
   },
+  {
+    src: "https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/3ff5abf90_image.png",
+    alt: "Beach picnic with happy guests",
+  },
 ];
 
 export default function GallerySection() {
