@@ -3,9 +3,11 @@ import { motion } from "framer-motion";
 import { MapPin, ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 
 const packages = [
   {
+    slug: "three-island-dreamer",
     title: "Three-Island Dreamer Package",
     subtitle: "3 Islands",
     description:
@@ -15,6 +17,7 @@ const packages = [
     highlights: ["3 Island Stops", "Snorkeling", "Beach BBQ", "Full Day"],
   },
   {
+    slug: "olango-island-day-tour",
     title: "Olango Island Day Tour",
     subtitle: "1 Island",
     description:
@@ -24,6 +27,7 @@ const packages = [
     highlights: ["Bird Sanctuary", "Beach Time", "Local Culture", "Half Day"],
   },
   {
+    slug: "whale-sharks-tumalog-falls",
     title: "Whale Sharks & Tumalog Falls",
     subtitle: "Adventure",
     description:
@@ -109,12 +113,14 @@ export default function PackagesSection() {
                   ))}
                 </div>
 
-                <Button
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-body font-semibold rounded-xl group/btn"
-                >
-                  More Details
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
+                <Link to={`/packages/${pkg.slug}`}>
+                  <Button
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-body font-semibold rounded-xl group/btn"
+                  >
+                    More Details
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           ))}
