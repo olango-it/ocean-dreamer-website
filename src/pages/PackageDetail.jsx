@@ -18,15 +18,15 @@ const packages = [
     description:
       "Experience the ultimate island-hopping adventure visiting three stunning islands with pristine beaches, crystal-clear waters, and vibrant marine life. This is our signature package — the one guests rave about most!",
     longDescription:
-      "Embark on a full-day voyage across three of the most breathtaking islands in the Cebu area. You'll start your morning at the dock in Santa Rosa Port, Olango Island, where you'll be greeted by Jay and his friendly crew. As you cruise through turquoise waters, you'll stop at three handpicked island gems — each offering its own unique charm.",
+      "Embark on a full-day voyage across three of the most breathtaking islands in the Cebu area. You'll start your morning at the dock in Maribago Port, Olango Island, where you'll be greeted by Jay and his friendly crew. As you cruise through turquoise waters, you'll stop at three handpicked island gems — each offering its own unique charm.",
     itinerary: [
-      { time: "8:00 AM", activity: "Meet at Santa Rosa Port, Olango Island — welcome briefing & safety orientation" },
+      { time: "8:00 AM", activity: "Meet at Maribago Port, Olango Island — welcome briefing & safety orientation" },
       { time: "8:30 AM", activity: "Set sail to Island #1 — snorkeling in vibrant coral reef waters" },
       { time: "10:30 AM", activity: "Cruise to Island #2 — white sand beach relaxation & swimming" },
       { time: "12:30 PM", activity: "Beach BBQ lunch served on the island — fresh fish, rice, tropical fruits" },
       { time: "2:00 PM", activity: "Journey to Island #3 — explore the beach and take in the stunning scenery" },
       { time: "4:00 PM", activity: "Sunset cruise back to port — photos, music, and celebration!" },
-      { time: "5:30 PM", activity: "Arrive back at Santa Rosa Port" },
+      { time: "5:30 PM", activity: "Arrive back at Maribago Port" },
     ],
     includes: [
       "Boat transportation throughout the day",
@@ -62,7 +62,7 @@ const packages = [
     longDescription:
       "Olango Island is a hidden gem just off the coast of Mactan. It's one of the most important bird sanctuaries in Southeast Asia and a haven of natural beauty. This tour takes you through the mangroves, along pristine beaches, and into the heart of local Filipino island life. Perfect for nature lovers, bird watchers, and anyone seeking a peaceful escape.",
     itinerary: [
-      { time: "8:00 AM", activity: "Depart from Santa Rosa Port — scenic boat ride to Olango" },
+      { time: "8:00 AM", activity: "Depart from Maribago Port — scenic boat ride to Olango" },
       { time: "8:30 AM", activity: "Visit the Olango Island Wildlife Sanctuary — guided bird watching tour" },
       { time: "10:00 AM", activity: "Walk through traditional fishing village — meet the local community" },
       { time: "11:00 AM", activity: "Relax on a white sand beach — swimming & leisure time" },
@@ -102,7 +102,7 @@ const packages = [
     longDescription:
       "This is the adventure of a lifetime! We'll take you south to Oslob, where you'll have an intimate, once-in-a-lifetime encounter with whale sharks — the largest fish in the ocean. These gentle giants are known to gather near the shore, giving you an unforgettable up-close experience. After your swim, we head to the magical Tumalog Falls — a stunning cascade hidden in the jungle that will take your breath away.",
     itinerary: [
-      { time: "5:30 AM", activity: "Early departure from Santa Rosa Port — drive south to Oslob (approx. 3 hrs)" },
+      { time: "5:30 AM", activity: "Early departure from Maribago Port — drive south to Oslob (approx. 3 hrs)" },
       { time: "8:30 AM", activity: "Arrival at Oslob Whale Shark Watching — safety briefing & rules" },
       { time: "9:00 AM", activity: "Swim & snorkel with whale sharks in their natural habitat!" },
       { time: "10:30 AM", activity: "Drive to Tumalog Falls (15 minutes away)" },
