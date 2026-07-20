@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import ReactMarkdown from "react-markdown";
 import { useSiteContent } from "@/hooks/useSiteContent";
 import { getIcon } from "@/lib/contentStore";
 
@@ -24,6 +25,29 @@ export default function AboutSection() {
             {about.title}
           </h2>
           <div className="w-16 h-1 bg-secondary mx-auto rounded-full" />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="max-w-3xl mx-auto space-y-5 mb-16"
+        >
+          {about.description.map((para, i) => (
+            <p
+              key={i}
+              className="font-body text-sm md:text-base text-muted-foreground leading-relaxed [&_strong]:text-foreground [&_strong]:font-semibold"
+            >
+              <ReactMarkdown
+                components={{
+                  strong: ({ node, ...props }) => <strong {...props} />,
+                }}
+              >
+                {para}
+              </ReactMarkdown>
+            </p>
+          ))}
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">

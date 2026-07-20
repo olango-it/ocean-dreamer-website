@@ -37,6 +37,13 @@ export const DEFAULT_CONTENT = {
   about: {
     eyebrow: "Discover",
     title: "What is Ocean Dreamer?",
+    description: [
+      "**Ocean Dreamer Island Tours** is a premier island-hopping and eco-tourism operator based in **Olango Island, Cebu**, offering exceptional travel experiences across **Mactan Island, Olango Island, and the surrounding islets**. We are dedicated to showcasing the region's pristine natural beauty, rich marine biodiversity, vibrant coastal culture, and world-class island destinations.",
+      "Our carefully curated tours take guests to stunning white-sand beaches, crystal-clear waters, protected marine sanctuaries, hidden sandbars, vibrant coral reefs, snorkeling and diving sites, and picturesque island communities. Whether you're seeking a relaxing tropical escape, an exciting island-hopping adventure, a private boat tour, or a customized group excursion, our experienced team is committed to providing a safe, comfortable, and unforgettable experience.",
+      "At **Ocean Dreamer Island Tours**, we take pride in delivering exceptional customer service, professional tour operations, and authentic local hospitality. We are committed to promoting sustainable tourism by supporting local communities and helping preserve the natural beauty and marine ecosystems that make our islands truly extraordinary.",
+      "Discover the breathtaking destinations of **Mactan Island, Olango Island, Nalusuan Island, Hilutungan Island, Caohagan Island, Sulpa Island, Pandanon Island**, and other nearby tropical gems with confidence, comfort, and peace of mind.",
+      "**Ocean Dreamer Island Tours – Enjoy Tomorrow Today.**",
+    ],
     values: [
       {
         icon: "Compass",
