@@ -2,10 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, Waves } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const HERO_IMAGE = "https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/0bf267555_image.png";
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 export default function HeroSection() {
+  const { content } = useSiteContent();
+  const hero = content.hero;
+
   const scrollTo = (href) => {
     const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -16,7 +18,7 @@ export default function HeroSection() {
       {/* Background */}
       <div className="absolute inset-0">
         <img
-          src={HERO_IMAGE}
+          src={hero.image}
           alt="Ocean Dreamer tour boat on crystal clear tropical waters"
           className="w-full h-full object-cover"
         />
@@ -44,22 +46,21 @@ export default function HeroSection() {
             <div className="h-px w-12 bg-white/40" />
             <Waves className="w-5 h-5 text-secondary" />
             <span className="font-body text-xs uppercase tracking-[0.3em] text-white/70">
-              Enjoy Tomorrow Today
+              {hero.eyebrow}
             </span>
             <Waves className="w-5 h-5 text-secondary" />
             <div className="h-px w-12 bg-white/40" />
           </div>
 
           <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-[1.1]">
-            Ocean Dreamer
+            {hero.title}
             <span className="block text-secondary text-3xl md:text-4xl lg:text-5xl mt-2 font-medium">
-              Island Tours
+              {hero.subtitle}
             </span>
           </h1>
 
           <p className="font-body text-base md:text-lg text-white/80 max-w-xl mx-auto mb-10 leading-relaxed">
-            Discover the breathtaking beauty of Olango Island and its neighboring islets 
-            with an unforgettable island-hopping experience.
+            {hero.description}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -68,7 +69,7 @@ export default function HeroSection() {
               onClick={() => scrollTo("#packages")}
               className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-body font-semibold px-8 py-6 text-base rounded-full shadow-xl shadow-secondary/20"
             >
-              View Packages
+              {hero.primaryButton}
             </Button>
             <Button
               size="lg"
@@ -76,7 +77,7 @@ export default function HeroSection() {
               onClick={() => scrollTo("#about")}
               className="border-white/30 text-white hover:bg-white/10 font-body px-8 py-6 text-base rounded-full backdrop-blur-sm"
             >
-              Learn More
+              {hero.secondaryButton}
             </Button>
           </div>
         </motion.div>

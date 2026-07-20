@@ -1,14 +1,6 @@
 import React from "react";
 import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
-
-const socials = [
-  { label: "Facebook", href: "#" },
-  { label: "YouTube", href: "#" },
-  { label: "Instagram", href: "#" },
-  { label: "Twitter", href: "#" },
-];
-
-const quickLinks = ["About", "Packages", "Gallery", "FAQ", "Contact"];
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 const scrollTo = (id) => {
   const el = document.querySelector(`#${id.toLowerCase()}`);
@@ -16,6 +8,9 @@ const scrollTo = (id) => {
 };
 
 export default function Footer() {
+  const { content } = useSiteContent();
+  const footer = content.footer;
+
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Top accent bar */}
@@ -27,12 +22,12 @@ export default function Footer() {
           {/* Logo & tagline */}
           <div className="flex flex-col items-start gap-4">
             <img
-              src="https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/76b0e6cf7_transparentlogo.png"
+              src={footer.logo}
               alt="Ocean Dreamer Island Tours"
               className="h-28 w-auto object-contain"
             />
             <p className="font-body text-sm text-white/60 leading-relaxed max-w-xs">
-              Experience the magic of Olango Island and its stunning neighboring islets with the most memorable island-hopping tours in the Philippines.
+              {footer.tagline}
             </p>
           </div>
 
@@ -40,7 +35,7 @@ export default function Footer() {
           <div>
             <h4 className="font-heading text-base font-bold text-white mb-5 tracking-wide">Quick Links</h4>
             <ul className="space-y-3">
-              {quickLinks.map((link) => (
+              {footer.quickLinks.map((link) => (
                 <li key={link}>
                   <button
                     onClick={() => scrollTo(link)}
@@ -60,19 +55,19 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-secondary mt-0.5 flex-shrink-0" />
-                <span className="font-body text-sm text-white/60 leading-relaxed">Santa Rosa Port, Olango Island, Lapu-Lapu City, Cebu, Philippines</span>
+                <span className="font-body text-sm text-white/60 leading-relaxed">{footer.location}</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-secondary flex-shrink-0" />
-                <span className="font-body text-sm text-white/60">+1 847-909-6598</span>
+                <span className="font-body text-sm text-white/60">{footer.phone}</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-secondary flex-shrink-0" />
-                <span className="font-body text-sm text-white/60">enjoy@ocean-dreamer.com</span>
+                <span className="font-body text-sm text-white/60">{footer.email}</span>
               </li>
               <li className="flex items-center gap-3">
                 <MessageCircle className="w-4 h-4 text-secondary flex-shrink-0" />
-                <span className="font-body text-sm text-white/60">WhatsApp & Viber: +1 847-909-6598</span>
+                <span className="font-body text-sm text-white/60">{footer.messaging}</span>
               </li>
             </ul>
           </div>
@@ -81,10 +76,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-body text-xs text-white/40">
-            © {new Date().getFullYear()} Ocean Dreamer Island Tours. All Rights Reserved. <span className="text-secondary/70">Enjoy Tomorrow Today!</span>
+            © {new Date().getFullYear()} {footer.copyright} <span className="text-secondary/70">{footer.copyrightTagline}</span>
           </p>
           <div className="flex items-center gap-6">
-            {socials.map((s) => (
+            {footer.socials.map((s) => (
               <a
                 key={s.label}
                 href={s.href}

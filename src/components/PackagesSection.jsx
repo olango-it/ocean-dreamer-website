@@ -4,41 +4,13 @@ import { MapPin, ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-
-const packages = [
-  {
-    slug: "three-island-dreamer",
-    title: "Three-Island Dreamer Package",
-    subtitle: "3 Islands",
-    description:
-      "Experience the ultimate island-hopping adventure visiting three stunning islands with pristine beaches, crystal-clear waters, and vibrant marine life.",
-    image: "https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/bf494ba18_generated_7522d7ea.png",
-    featured: true,
-    highlights: ["3 Island Stops", "Snorkeling", "Beach BBQ", "Full Day"],
-  },
-  {
-    slug: "olango-island-day-tour",
-    title: "Olango Island Day Tour",
-    subtitle: "1 Island",
-    description:
-      "Explore the beauty of Olango Island with its famous bird sanctuary, white sand beaches, and charming local culture in a relaxing day trip.",
-    image: "https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/fe65d6a6a_generated_f2a41034.png",
-    featured: false,
-    highlights: ["Bird Sanctuary", "Beach Time", "Local Culture", "Half Day"],
-  },
-  {
-    slug: "whale-sharks-tumalog-falls",
-    title: "Whale Sharks & Tumalog Falls",
-    subtitle: "Adventure",
-    description:
-      "Swim alongside gentle whale sharks in their natural habitat, then cool off under the majestic cascading waters of Tumalog Falls.",
-    image: "https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/d7e7c6c48_generated_ade5e2a3.png",
-    featured: false,
-    highlights: ["Whale Sharks", "Tumalog Falls", "Guided Tour", "Full Day"],
-  },
-];
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 export default function PackagesSection() {
+  const { content } = useSiteContent();
+  const section = content.packagesSection;
+  const packages = content.packages;
+
   return (
     <section id="packages" className="py-24 md:py-32 px-6 bg-muted/50">
       <div className="max-w-6xl mx-auto">
@@ -50,21 +22,21 @@ export default function PackagesSection() {
           className="text-center mb-16"
         >
           <span className="font-body text-xs uppercase tracking-[0.3em] text-primary font-semibold">
-            Explore
+            {section.eyebrow}
           </span>
           <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3 mb-4">
-            Tour Packages
+            {section.title}
           </h2>
           <div className="w-16 h-1 bg-secondary mx-auto rounded-full" />
           <p className="font-body text-muted-foreground mt-6 max-w-lg mx-auto">
-            Choose from our carefully curated island tour packages designed to give you an unforgettable experience.
+            {section.description}
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {packages.map((pkg, i) => (
             <motion.div
-              key={pkg.title}
+              key={pkg.slug}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

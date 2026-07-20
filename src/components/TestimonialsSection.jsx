@@ -1,51 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
-
-const testimonials = [
-  {
-    name: "Deen_Singapore",
-    location: "Singapore",
-    date: "Dec 2014",
-    rating: 5,
-    text: "Where do I start? From the minute my partner and I met Jay outside my hotel to the time we stepped off the boat, we had an amazing time! Apart from the beautiful marine life, Jay and his crew were so warm, funny and entertaining. The food was also amazing — fresh fish, mangoes, rice. Highly recommend!",
-  },
-  {
-    name: "758angel1990",
-    location: "Europe",
-    date: "Nov 2014",
-    rating: 5,
-    text: "Jay and the crew were very nice. We had so much fun! If ever you guys plan for an island hopping tour, never hesitate to choose Ocean Dreamer. Very nice people. They offered you everything you needed and made sure you had the best experience.",
-  },
-  {
-    name: "MargaretM_10",
-    location: "United States",
-    date: "Mar 2020",
-    rating: 5,
-    text: "Absolutely incredible experience! The snorkeling spots were breathtaking — crystal clear water, vibrant coral, and so many fish. The crew was attentive and friendly the whole time. The beach picnic lunch was a wonderful surprise. This tour was the highlight of our entire Philippines trip!",
-  },
-  {
-    name: "TravellerJo_AU",
-    location: "Australia",
-    date: "Aug 2019",
-    rating: 5,
-    text: "Ocean Dreamer exceeded all our expectations. Jay is a fantastic guide who truly cares about his guests. The islands were stunning, the water was perfect, and the whole day felt magical. We will definitely be back next time we visit Cebu!",
-  },
-  {
-    name: "CebuAdventurer",
-    location: "United Kingdom",
-    date: "Jan 2020",
-    rating: 5,
-    text: "Best island hopping tour in Cebu, hands down! The crew was super friendly, the food was delicious, and the snorkeling was out of this world. Jay made sure every guest was comfortable and having fun. Don't think twice — just book it!",
-  },
-  {
-    name: "NomadCouple_DE",
-    location: "Germany",
-    date: "Feb 2019",
-    rating: 5,
-    text: "We booked Ocean Dreamer on a recommendation and it was the best decision of our trip. Stunning beaches, amazing snorkeling gear provided, and a warm crew who treated us like family. The sunset on the way back was unforgettable.",
-  },
-];
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 const Stars = ({ count }) => (
   <div className="flex gap-0.5">
@@ -56,6 +12,9 @@ const Stars = ({ count }) => (
 );
 
 export default function TestimonialsSection() {
+  const { content } = useSiteContent();
+  const section = content.testimonials;
+
   return (
     <section id="testimonials" className="py-24 md:py-32 px-6 bg-muted/40">
       <div className="max-w-6xl mx-auto">
@@ -67,19 +26,19 @@ export default function TestimonialsSection() {
           className="text-center mb-16"
         >
           <span className="font-body text-xs uppercase tracking-[0.3em] text-primary font-semibold">
-            TripAdvisor Reviews
+            {section.eyebrow}
           </span>
           <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3 mb-4">
-            What Our Guests Say
+            {section.title}
           </h2>
           <div className="w-16 h-1 bg-secondary mx-auto rounded-full" />
           <p className="font-body text-sm text-muted-foreground mt-6 max-w-md mx-auto">
-            Don't just take our word for it — here's what travelers from around the world say about their Ocean Dreamer experience.
+            {section.description}
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
+          {section.items.map((t, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}

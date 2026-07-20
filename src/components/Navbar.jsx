@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Packages", href: "#packages" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
-];
+import { Link } from "react-router-dom";
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 export default function Navbar() {
+  const { content } = useSiteContent();
+  const nav = content.navbar;
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -29,15 +24,15 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white shadow-lg shadow-primary/10" : "bg-white"}`}>
-      {/* Top accent bar */}
-      <div className="h-1 w-full bg-gradient-to-r from-primary via-secondary to-accent" />
+      {/* Top accent bar — hidden admin portal entry */}
+      <Link to="/admin" title="Staff" aria-label="Staff" className="block h-1 w-full bg-gradient-to-r from-primary via-secondary to-accent" />
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <button onClick={() => scrollTo("#home")} className="flex items-center group flex-shrink-0">
             <img
-              src="https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/459e2ffef_transparentlogo.png"
+              src={nav.logo}
               alt="Ocean Dreamer Island Tours"
               className="h-24 md:h-32 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
@@ -45,7 +40,7 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
+            {nav.navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => scrollTo(link.href)}
@@ -59,7 +54,7 @@ export default function Navbar() {
               onClick={() => scrollTo("#contact")}
               className="ml-4 px-5 py-2.5 bg-gradient-to-r from-primary to-accent text-white font-body text-sm font-bold rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200"
             >
-              Book Now
+              {nav.bookNowLabel}
             </button>
           </div>
 
@@ -83,7 +78,7 @@ export default function Navbar() {
             className="md:hidden bg-white border-t border-border overflow-hidden shadow-lg"
           >
             <div className="px-6 py-4 space-y-1">
-              {navLinks.map((link) => (
+              {nav.navLinks.map((link) => (
                 <button
                   key={link.href}
                   onClick={() => scrollTo(link.href)}
@@ -96,7 +91,7 @@ export default function Navbar() {
                 onClick={() => scrollTo("#contact")}
                 className="block w-full mt-2 py-3 bg-gradient-to-r from-primary to-accent text-white font-body text-sm font-bold rounded-xl text-center"
               >
-                Book Now
+                {nav.bookNowLabel}
               </button>
             </div>
           </motion.div>

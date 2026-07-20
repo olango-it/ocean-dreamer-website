@@ -1,55 +1,12 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
-
-const photos = [
-  {
-    src: "https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/2a3d5b12e_image.png",
-    alt: "Happy guests jumping on the beach",
-  },
-  {
-    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/38/0f/24/20180302-133645-largejpg.jpg?w=800&h=600&s=1",
-    alt: "Snorkeling with tropical fish",
-  },
-  {
-    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/b6/e1/78/photo2jpg.jpg?w=800&h=600&s=1",
-    alt: "Crystal clear waters",
-  },
-  {
-    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/1f/05/ab/img-20200309-120304-103.jpg?w=800&h=600&s=1",
-    alt: "Snorkeling adventure",
-  },
-  {
-    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/17/8f/11/img-20190818-121909-largejpg.jpg?w=800&h=600&s=1",
-    alt: "Tropical paradise waters",
-  },
-  {
-    src: "https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/3dea061d7_image.png",
-    alt: "Group selfie with guests and crew",
-  },
-  {
-    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/17/8f/10/img-20190818-115830-largejpg.jpg?w=900&h=-1&s=1",
-    alt: "Sunset at the beach",
-  },
-  {
-    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/1f/05/ad/img-20200309-wa0000-largejpg.jpg?w=800&h=600&s=1",
-    alt: "Island hopping fun",
-  },
-  {
-    src: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/17/8f/14/img-20190818-134245-largejpg.jpg?w=800&h=600&s=1",
-    alt: "Tropical island scenery",
-  },
-  {
-    src: "https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/3ff5abf90_image.png",
-    alt: "Beach picnic with happy guests",
-  },
-  {
-    src: "https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/cc1e65881_image.png",
-    alt: "Guests and crew on the boat",
-  },
-];
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 export default function GallerySection() {
+  const { content } = useSiteContent();
+  const gallery = content.gallery;
+  const photos = gallery.photos;
   const [selected, setSelected] = useState(null);
 
   return (
@@ -63,14 +20,14 @@ export default function GallerySection() {
           className="text-center mb-16"
         >
           <span className="font-body text-xs uppercase tracking-[0.3em] text-primary font-semibold">
-            Memories
+            {gallery.eyebrow}
           </span>
           <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3 mb-4">
-            Gallery
+            {gallery.title}
           </h2>
           <div className="w-16 h-1 bg-secondary mx-auto rounded-full" />
           <p className="font-body text-sm text-muted-foreground mt-6 max-w-md mx-auto">
-            Real moments from our guests — snorkeling, beaches, and island adventures.
+            {gallery.description}
           </p>
         </motion.div>
 

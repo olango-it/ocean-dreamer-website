@@ -6,16 +6,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { base44 } from "@/api/base44Client";
-
-const contactInfo = [
-  { icon: MapPin, label: "Location", value: "Santa Rosa Port, Olango Island, Lapu-Lapu City, Cebu, Philippines" },
-  { icon: Phone, label: "Phone", value: "+1 847-909-6598" },
-  { icon: Mail, label: "Email", value: "enjoy@ocean-dreamer.com" },
-  { icon: MessageCircle, label: "WhatsApp", value: "+1 847-909-6598" },
-  { icon: MessageCircle, label: "Viber", value: "+1 847-909-6598" },
-];
+import { useSiteContent } from "@/hooks/useSiteContent";
+import { getIcon } from "@/lib/contentStore";
 
 export default function ContactSection() {
+  const { content } = useSiteContent();
+  const contact = content.contact;
   const [form, setForm] = useState({ name: "", email: "", subject: "Tour inquiry", message: "" });
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
@@ -24,7 +20,7 @@ export default function ContactSection() {
     e.preventDefault();
     setSending(true);
     await base44.integrations.Core.SendEmail({
-      to: "enjoy@ocean-dreamer.com",
+      to: contact.recipientEmail,
       subject: `[Ocean Dreamer] ${form.subject}`,
       body: `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`,
     });
@@ -44,10 +40,10 @@ export default function ContactSection() {
           className="text-center mb-16"
         >
           <span className="font-body text-xs uppercase tracking-[0.3em] text-primary font-semibold">
-            Reach Out
+            {contact.eyebrow}
           </span>
           <h2 className="font-heading text-3xl md:text-5xl font-bold text-foreground mt-3 mb-4">
-            Contact Us
+            {contact.title}
           </h2>
           <div className="w-16 h-1 bg-secondary mx-auto rounded-full" />
         </motion.div>
@@ -66,27 +62,29 @@ export default function ContactSection() {
                 Get in Touch
               </h3>
               <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                Ready to book your dream island tour? Have questions about our packages? 
-                We'd love to hear from you. Reach out through any of the channels below.
+                {contact.intro}
               </p>
             </div>
 
             <div className="space-y-5">
-              {contactInfo.map((item) => (
-                <div key={item.label} className="flex items-start gap-4 group">
-                  <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                    <item.icon className="w-5 h-5 text-primary" />
+              {contact.info.map((item) => {
+                const Icon = getIcon(item.icon);
+                return (
+                  <div key={item.label} className="flex items-start gap-4 group">
+                    <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
+                      <Icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-body text-xs uppercase tracking-wider text-muted-foreground mb-0.5">
+                        {item.label}
+                      </p>
+                      <p className="font-body text-sm font-medium text-foreground">
+                        {item.value}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-body text-xs uppercase tracking-wider text-muted-foreground mb-0.5">
-                      {item.label}
-                    </p>
-                    <p className="font-body text-sm font-medium text-foreground">
-                      {item.value}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </motion.div>
 

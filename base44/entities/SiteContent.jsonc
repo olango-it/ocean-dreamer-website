@@ -1,0 +1,30 @@
+{
+  "name": "SiteContent",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "additionalProperties": true,
+      "title": "Content Data",
+      "description": "The full editable site content tree."
+    }
+  },
+  "required": [
+    "data"
+  ],
+  "security": {
+    "read": [
+      "public",
+      "admin"
+    ],
+    "create": [
+      "admin"
+    ],
+    "update": [
+      "admin"
+    ],
+    "delete": [
+      "admin"
+    ]
+  }
+}
