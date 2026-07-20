@@ -2,16 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ChevronDown, Waves } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import { useSiteContent } from "@/hooks/useSiteContent";
 
 export default function HeroSection() {
   const { content } = useSiteContent();
   const hero = content.hero;
-
-  const scrollTo = (href) => {
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
+  const navigate = useNavigate();
 
   return (
     <section id="home" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
@@ -66,7 +63,7 @@ export default function HeroSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
               size="lg"
-              onClick={() => scrollTo("#packages")}
+              onClick={() => navigate("/packages")}
               className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-body font-semibold px-8 py-6 text-base rounded-full shadow-xl shadow-secondary/20"
             >
               {hero.primaryButton}
@@ -74,7 +71,7 @@ export default function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              onClick={() => scrollTo("#about")}
+              onClick={() => navigate("/about")}
               className="border-white/30 text-white hover:bg-white/10 font-body px-8 py-6 text-base rounded-full backdrop-blur-sm"
             >
               {hero.secondaryButton}
@@ -85,7 +82,7 @@ export default function HeroSection() {
 
       {/* Scroll indicator */}
       <motion.button
-        onClick={() => scrollTo("#about")}
+        onClick={() => navigate("/about")}
         className="absolute bottom-24 left-1/2 -translate-x-1/2 text-white/60 hover:text-white transition-colors"
         animate={{ y: [0, 8, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}

@@ -3,11 +3,12 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Star, MapPin, Clock, Users, CheckCircle, Phone, Mail, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import { useSiteContent } from "@/hooks/useSiteContent";
 
 export default function PackageDetail() {
   const { slug } = useParams();
+  const navigate = useNavigate();
   const { content } = useSiteContent();
   const pkg = content.packages.find((p) => p.slug === slug);
 
@@ -23,7 +24,7 @@ export default function PackageDetail() {
   }
 
   const scrollToContact = () => {
-    window.location.href = "/#contact";
+    navigate("/contact");
   };
 
   return (
@@ -34,7 +35,7 @@ export default function PackageDetail() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
 
         {/* Back button */}
-        <Link to="/" className="absolute top-6 left-6">
+        <Link to="/packages" className="absolute top-6 left-6">
           <Button variant="ghost" className="text-white hover:bg-white/20 rounded-full gap-2 font-body">
             <ArrowLeft className="w-4 h-4" /> Back
           </Button>

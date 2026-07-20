@@ -17,12 +17,12 @@ export const DEFAULT_CONTENT = {
     logo: "https://media.base44.com/images/public/6a073c2cf9669ff20d3a8fe6/459e2ffef_transparentlogo.png",
     bookNowLabel: "Book Now",
     navLinks: [
-      { label: "Home", href: "#home" },
-      { label: "About", href: "#about" },
-      { label: "Packages", href: "#packages" },
-      { label: "Gallery", href: "#gallery" },
-      { label: "FAQ", href: "#faq" },
-      { label: "Contact", href: "#contact" },
+      { label: "Home", href: "/" },
+      { label: "About", href: "/about" },
+      { label: "Packages", href: "/packages" },
+      { label: "Gallery", href: "/gallery" },
+      { label: "FAQ", href: "/faq" },
+      { label: "Contact", href: "/contact" },
     ],
   },
   hero: {
